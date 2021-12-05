@@ -1,0 +1,5 @@
+.hero-image {
+  background-image: url("http://localhost:1337/uploads/homepage_hero_bg_13dab7e83f.jpg");
+  background-attachment: fixed;
+  background-position: center right;
+}
