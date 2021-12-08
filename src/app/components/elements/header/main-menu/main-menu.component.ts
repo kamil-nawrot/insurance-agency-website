@@ -1,4 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
+import { ActivatedRoute, Router } from "@angular/router";
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import {WindowService} from "../../../../services/window.service";
 import {Subscription} from "rxjs";
@@ -16,12 +17,16 @@ export class MainMenuComponent implements OnInit, OnDestroy {
   isMenuVisible = false
   windowSizeSub$: Subscription = new Subscription
 
-  constructor(private windowService: WindowService) { }
+  constructor(private windowService: WindowService, private currentRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.windowSizeSub$ = this.windowService.windowWidth$.subscribe(windowSize => {
       this.isMobileMenu = windowSize.width < 768
     })
+  }
+
+  onMenuItemClicked(menuItem: string): void {
+    this.isMenuVisible = false
   }
 
   ngOnDestroy() {

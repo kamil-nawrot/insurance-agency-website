@@ -3,13 +3,13 @@
     <fa-icon class="text-2xl" [icon]="barsIcon" role="button" (click)="isMenuVisible = !isMenuVisible"></fa-icon>
     <ul *ngIf="isMenuVisible" class="absolute flex flex-col w-full top-24 left-0 text-center bg-white bg-opacity-95 divide-y divide-gray-300 shadow-lg">
       <li *ngFor="let item of menuItems" class="cursor-pointer text-lg py-4 m-0">
-        {{ item }}
+        <a (click)="onMenuItemClicked(item)" [routerLink]="['/', item]">{{ item }}</a>
       </li>
     </ul>
   </article>
   <ul class="flex flex-row space-x-8" *ngIf="!isMobileMenu">
     <li *ngFor="let item of menuItems" class="cursor-pointer text-lg">
-      {{ item }}
+      <a [routerLink]="['/', item]">{{ item }}</a>
     </li>
   </ul>
 </nav>

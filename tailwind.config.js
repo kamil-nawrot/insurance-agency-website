@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       width: {
         'fit-content': 'fit-content'
-      }
+      },
+      backgroundColor: ["even"]
     },
   },
   variants: {
