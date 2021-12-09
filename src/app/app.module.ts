@@ -45,7 +45,7 @@ import { QuestionComponent } from './components/contact/question-list/question/q
     RouterModule.forRoot([
       { path: "", component: HomepageComponent },
       { path: "kontakt", component: QuestionListComponent },
-      { path: "start", redirectTo: "/" }
+      { path: "*", redirectTo: "/" }
     ]),
     FontAwesomeModule,
     BrowserAnimationsModule

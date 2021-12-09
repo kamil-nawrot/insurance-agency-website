@@ -6,7 +6,7 @@ import { MapInfoWindow, MapMarker } from "@angular/google-maps";
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent implements OnInit, AfterViewInit {
+export class MapComponent implements AfterViewInit {
 
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined
   @ViewChild("marker") marker: MapMarker | undefined
@@ -16,10 +16,6 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
 
   constructor() {
-  }
-
-  ngOnInit(): void {
-    this.infoWindow!.open(this.marker)
   }
 
   ngAfterViewInit(): void {
