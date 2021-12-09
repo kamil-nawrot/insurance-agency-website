@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { GoogleMapsModule } from "@angular/google-maps";
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -40,6 +41,7 @@ import { QuestionComponent } from './components/contact/question-list/question/q
   imports: [
     BrowserModule,
     ScullyLibModule,
+    GoogleMapsModule,
     RouterModule.forRoot([
       { path: "", component: HomepageComponent },
       { path: "kontakt", component: QuestionListComponent },

@@ -11,7 +11,7 @@ import {Subscription} from "rxjs";
 })
 export class MainMenuComponent implements OnInit, OnDestroy {
 
-  menuItems = ["start", "oferta", "kontakt"]
+  menuItems = ["oferta", "kontakt"]
   barsIcon = faBars
   isMobileMenu = window.innerWidth < 768
   isMenuVisible = false
@@ -25,8 +25,9 @@ export class MainMenuComponent implements OnInit, OnDestroy {
     })
   }
 
-  onMenuItemClicked(menuItem: string): void {
-    this.isMenuVisible = false
+  onMenuItemClicked(event: MouseEvent): void {
+    const clickedItem = (<Element>event.target)!.getAttribute("href")
+    this.isMenuVisible = clickedItem === this.router.url
   }
 
   ngOnDestroy() {
