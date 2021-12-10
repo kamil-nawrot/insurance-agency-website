@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
+import { GoogleMapsModule } from "@angular/google-maps";
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import {RouterModule} from "@angular/router";
+import { RouterModule } from "@angular/router";
 import { HeaderComponent } from './components/elements/header/header.component';
 import { MainMenuComponent } from './components/elements/header/main-menu/main-menu.component';
 import { AlertComponent } from './components/elements/alert/alert.component';
@@ -16,8 +17,10 @@ import { ContactSectionComponent } from './components/homepage/contact-section/c
 import { BrandsSectionComponent } from './components/homepage/brands-section/brands-section.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {HttpClientModule} from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HttpClientModule } from "@angular/common/http";
+import { QuestionListComponent } from './components/contact/question-list/question-list.component';
+import { QuestionComponent } from './components/contact/question-list/question/question.component';
 
 @NgModule({
   declarations: [
@@ -32,14 +35,19 @@ import {HttpClientModule} from "@angular/common/http";
     OfferSectionComponent,
     ContactSectionComponent,
     BrandsSectionComponent,
-    HomepageComponent
+    HomepageComponent,
+    QuestionListComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ScullyLibModule,
+    GoogleMapsModule,
     RouterModule.forRoot([
-      { path: "", component: HomepageComponent }
+      { path: "", component: HomepageComponent },
+      { path: "kontakt", component: QuestionListComponent },
+      { path: "*", redirectTo: "/" }
     ]),
     FontAwesomeModule,
     BrowserAnimationsModule

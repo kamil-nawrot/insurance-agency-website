@@ -17,6 +17,7 @@
     "@angular/compiler": "~13.0.0",
     "@angular/core": "~13.0.0",
     "@angular/forms": "~13.0.0",
+    "@angular/google-maps": "^13.1.0",
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
@@ -28,6 +29,8 @@
     "@scullyio/scully": "^2.0.0",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
+    "date-fns": "^2.27.0",
+    "moment": "^2.29.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
