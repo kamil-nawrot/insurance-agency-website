@@ -8,6 +8,7 @@ export interface HomepageData {
   id: number,
   logo_subtitle: string,
   logo_title: string,
+  hero_image: { url: string }
   published_at: Date,
   updated_at: Date
 }
