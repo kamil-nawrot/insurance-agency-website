@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ScrollDirection, WindowService} from "../../../services/window.service";
 import {auditTime, pairwise, startWith, Subscription} from "rxjs";
 import {animate, style, transition, trigger} from "@angular/animations";
+import {ContentLoaderService, HomepageData} from "../../../services/content-loader.service";
 
 @Component({
   selector: 'app-header',
@@ -32,8 +33,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   headerVisibilityState = "visible"
   windowScrollSub$: Subscription = new Subscription;
+  content = { title: "", subtitle: "" }
 
-  constructor(private windowService: WindowService) { }
+  constructor(private windowService: WindowService, private contentLoaderService: ContentLoaderService) { }
 
   ngOnInit(): void {
     this.windowScrollSub$ = this.windowService.windowScroll$.pipe(
@@ -46,6 +48,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
       else {
         this.headerVisibilityState = "visible"
       }
+    })
+    this.contentLoaderService.getHomepageContent$().subscribe((response: HomepageData) => {
+      this.content.title = response.logo_title
+      this.content.subtitle = response.logo_subtitle
     })
   }
 

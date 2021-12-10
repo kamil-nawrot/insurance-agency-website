@@ -17,6 +17,7 @@ import { BrandsSectionComponent } from './components/homepage/brands-section/bra
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ScullyLibModule,
     RouterModule.forRoot([
       { path: "", component: HomepageComponent }
