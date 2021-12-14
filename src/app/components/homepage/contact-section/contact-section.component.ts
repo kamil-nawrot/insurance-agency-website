@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
   intervalToDuration,
-  isWithinInterval, startOfToday, addHours, nextMonday
+  isWithinInterval, startOfToday, addHours, nextMonday, startOfDay
 } from "date-fns"
 
 @Component({
@@ -21,8 +21,10 @@ export class ContactSectionComponent implements OnInit {
       this.isOpen = false
       this.remainingTime = intervalToDuration({
         start: this.currentDay,
-        end: addHours(nextMonday(this.currentDay), 9)
+        end: addHours(startOfDay(nextMonday(this.currentDay)), 9)
       })
+      console.log(this.currentDay)
+      console.log(nextMonday(this.currentDay))
     }
     else if(isWithinInterval(this.currentDay, {
       start: addHours(startOfToday(), 9),

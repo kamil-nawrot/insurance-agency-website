@@ -1,7 +1,6 @@
 <aside
-  class="hero-image bg-blue-500 bg-fixed w-full h-96 shadow-inner"
-  *ngIf="homepageContent"
-  [ngStyle]="{ background: 'url(' + baseUrl + homepageContent!.hero_image.url + ')'}"
+  class="hero-image bg-fixed w-full h-96 shadow-inner"
+  [ngStyle]="{ background: (homepageContent ? 'url(' + baseUrl + homepageContent!.hero_image.url + ')' : 'white')}"
 >
 </aside>
 <main class="w-full bg-white my-16">
