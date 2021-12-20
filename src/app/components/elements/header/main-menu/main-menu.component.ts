@@ -16,12 +16,16 @@ export class MainMenuComponent implements OnInit, OnDestroy {
   isMobileMenu = window.innerWidth < 768
   isMenuVisible = false
   windowSizeSub$: Subscription = new Subscription
+  windowScrollSub$: Subscription = new Subscription;
 
   constructor(private windowService: WindowService, private currentRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.windowSizeSub$ = this.windowService.windowWidth$.subscribe(windowSize => {
       this.isMobileMenu = windowSize.width < 768
+    })
+    this.windowScrollSub$ = this.windowService.windowScroll$.subscribe(scroll => {
+      this.isMenuVisible = false
     })
   }
 

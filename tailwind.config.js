@@ -6,6 +6,10 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      display: ["Cinzel", "serif"],
+      sans: ["Cairo", "sans-serif"]
+    },
     extend: {
       width: {
         'fit-content': 'fit-content'

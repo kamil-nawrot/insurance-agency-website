@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section {
+  @apply max-w-5xl mx-0 sm:mx-12 lg:px-12 lg:mx-auto mt-16;
+}
+
+.section-headline {
+  @apply text-2xl font-bold mx-8 sm:mx-0 mb-8 pb-4 border-b-8 border-blue-900 font-display;
+}
+
+.section-paragraph {
+  @apply mx-8 sm:mx-0 text-base text-gray-700 leading-loose;
+}
