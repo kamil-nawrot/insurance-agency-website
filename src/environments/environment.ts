@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseCmsUrl: "http://localhost:1337"
+  baseCmsUrl: "http://localhost:1337/api",
+  baseMediaUrl: "http://localhost:1337"
 };
 
 /*

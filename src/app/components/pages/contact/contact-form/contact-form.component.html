@@ -1,0 +1,14 @@
+<article class="section">
+  <h2 class="section-headline">Skontaktuj się z nami!</h2>
+  <form [formGroup]="contactForm">
+    <label class="block my-2" for="name">Twoje imię</label>
+    <input id="name" class="block w-full p-2 rounded-md mb-4 border-2 border-black-50" type="text" formControlName="name" />
+    <label class="block my-2" for="name">Numer telefonu</label>
+    <input class="block w-full p-2 rounded-md mb-4 border-2 border-black-50" type="text" placeholder="123-456-789" formControlName="phone" />
+    <label class="block my-2" for="name">Adres e-mail</label>
+    <input class="block w-full p-2 rounded-md mb-4 border-2 border-black-50" type="text" placeholder="adres@domena.pl" formControlName="mail" />
+    <label class="block my-2" for="name">Wiadomość</label>
+    <textarea class="block w-full p-2 rounded-md mb-4 border-2 border-black-50" rows="8" formControlName="message"></textarea>
+    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 my-4 py-2 text-xl text-white">Wyślij</button>
+  </form>
+</article>

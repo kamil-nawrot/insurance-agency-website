@@ -3,6 +3,7 @@ import {ScrollDirection, WindowService} from "../../../services/window.service";
 import {auditTime, pairwise, startWith, Subscription} from "rxjs";
 import {animate, style, transition, trigger} from "@angular/animations";
 import {ContentLoaderService, HomepageData} from "../../../services/content-loader.service";
+import { HomepageComponent } from "../../pages/homepage/homepage.component";
 
 @Component({
   selector: 'app-header',
@@ -49,9 +50,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.headerVisibilityState = "visible"
       }
     })
-    this.contentLoaderService.getHomepageContent$().subscribe((response: HomepageData) => {
-      this.content.title = response.logo_title
-      this.content.subtitle = response.logo_subtitle
+    this.contentLoaderService.getHomepageContent$().subscribe(response => {
+      this.content.title = (<string>response.data.attributes["logo_title"])
+      this.content.subtitle = (<string>response.data.attributes["logo_subtitle"])
     })
   }
 

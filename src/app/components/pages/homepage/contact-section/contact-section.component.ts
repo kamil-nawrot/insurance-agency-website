@@ -17,7 +17,7 @@ export class ContactSectionComponent implements OnInit {
 
   constructor() {
     console.log(this.currentDay)
-    if([4, 5].includes(this.currentDay.getDay())) {
+    if([0, 6].includes(this.currentDay.getDay())) {
       this.isOpen = false
       this.remainingTime = intervalToDuration({
         start: this.currentDay,

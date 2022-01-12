@@ -1,0 +1,21 @@
+<aside
+  class="hero-image bg-fixed w-full h-96 shadow-inner bg-white"
+></aside>
+<main class="section w-full">
+  <h2 class="section-headline">Znajdź dowolne ubezpieczenie w naszej ofercie</h2>
+  <p class="section-paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum condimentum interdum. Fusce id suscipit nulla, et pretium nunc.
+    Nam quis egestas eros. Fusce pellentesque quam eget porta tincidunt. Vestibulum sit amet dignissim velit. Praesent lectus ante,
+    dictum eget nisl vel.
+  </p>
+  <section class="mt-8">
+    <article *ngFor="let i of [0,1,2,3,4,5]" class="h-64 group grid grid-cols-12 grid-rows-1 my-2 gap-0">
+      <div class="col-span-5 group-even:order-first group-odd:order-last overflow-hidden">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png" />
+      </div>
+      <div class="col-span-7 group-odd:bg-blue-500 group-even:bg-blue-600">
+        test
+      </div>
+    </article>
+  </section>
+</main>

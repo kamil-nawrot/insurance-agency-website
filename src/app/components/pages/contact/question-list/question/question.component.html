@@ -3,7 +3,7 @@
     <h3 class="">{{ question?.question }}</h3>
     <fa-icon [@arrow-toggle]="arrowState" class="transform active:rotate-180 ml-4" [icon]="dropdownIcon" role="button"></fa-icon>
   </header>
-  <p [@question-appearance]="arrowState" class="w-11/12 mt-4 mb-8 mr-0 ml-auto h-full" *ngIf="arrowState === 'reversed'">
+  <p [@question-appearance]="arrowState" class="w-11/12 mt-4 mb-8 mr-0 ml-auto" *ngIf="arrowState === 'reversed'">
     {{ question?.answer }}
   </p>
 </article>

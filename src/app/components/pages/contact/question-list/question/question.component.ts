@@ -26,7 +26,7 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
           opacity: 0
         }), group([
           animate(200, style({
-            height: "100%",
+            height: "auto",
             transform: "translateY(0)",
             marginTop: "1rem",
             marginBottom: "2rem",

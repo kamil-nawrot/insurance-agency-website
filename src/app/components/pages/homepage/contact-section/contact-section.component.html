@@ -1,0 +1,23 @@
+<article class="section">
+  <h3 class="section-headline">Lorem ipsum dolor sit amet</h3>
+  <div class="lg:grid lg:grid-cols-2 gap-4">
+    <app-map></app-map>
+    <main>
+      <p class="section-paragraph mt-8 lg:mt-0 mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum condimentum interdum. Fusce id suscipit nulla, et pretium nunc.
+        Nam quis egestas eros. Fusce pellentesque quam eget porta tincidunt. Vestibulum sit amet dignissim velit. Praesent lectus ante,
+        dictum eget nisl vel.
+        {{ currentDay }}
+      </p>
+      <a href="tel:602-281-933" class="block w-full mx-auto lg:ml-0 my-2 py-2 px-4 sm:px-8 bg-red-400 text-center font-bold text-white">602 281 933</a>
+      <a href="mailto:kontakt@nawrotubezpieczenia.pl" class="block w-full mx-auto lg:ml-0 my-2 py-2 px-4 sm:px-8 bg-red-400 text-center font-bold text-white">kontakt@nawrotubezpieczenia.pl</a>
+      <address class="w-full mx-auto lg:ml-0 my-2 py-2 px-4 sm:px-8 bg-blue-600 text-center font-bold text-white not-italic">Daszyńskiego 23, Mysłakowice</address>
+      <time class="block w-full mt-4 mx-auto px-8 sm:px-0 text-center sm:text-left text-green-600" *ngIf="isOpen && remainingTime.minutes">
+        Nasze biuro jest otwarte jeszcze przez
+        {{ remainingTime!.hours }} godzin{{ remainingTime!.hours === 1 ? "ę" : "" }} i
+        {{ remainingTime!.minutes }} minut{{ remainingTime!.minutes === 1 ? "ę" : ((remainingTime!.minutes < 5 && remainingTime.minutes !== 0) ? "y" : "") }}
+      </time>
+      <time class="w-full mt-4 mx-auto text-center text-yellow-600" *ngIf="!isOpen && remainingTime.days">Nasze biuro otworzy się za <span *ngIf="remainingTime.days > 0 || false">{{ remainingTime!.days }} dni, </span> {{ remainingTime!.hours }} godzin i {{ remainingTime!.minutes }} minut</time>
+    </main>
+  </div>
+</article>

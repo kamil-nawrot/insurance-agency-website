@@ -11,7 +11,7 @@ import {Subscription} from "rxjs";
 })
 export class MainMenuComponent implements OnInit, OnDestroy {
 
-  menuItems = ["oferta", "kontakt"]
+  menuItems = ["oferta", "o mnie", "kontakt"]
   barsIcon = faBars
   isMobileMenu = window.innerWidth < 768
   isMenuVisible = false

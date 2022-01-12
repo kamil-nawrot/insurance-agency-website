@@ -14,6 +14,10 @@ module.exports = {
       width: {
         'fit-content': 'fit-content'
       },
+      spacing: {
+        '128': '32rem',
+        '160': '40rem'
+      },
       backgroundColor: ["even"]
     },
   },
