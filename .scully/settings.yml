@@ -1,2 +1,11 @@
 identifier: k5wd098e4c7ff5b8
 allowErrorCollect: true
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: insurance-agency-website
+homeFolder: C:\Users\Public\insurance-agency-website
+distFolder: dist/insurance-agency-website
+outDir: C:\Users\Public\insurance-agency-website\dist\static
+handle404: ''
